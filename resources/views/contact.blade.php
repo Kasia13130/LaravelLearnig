@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <!-- <link rel="stylesheet" type="text/css" href="/css/app.css"> -->
-    </head>
-    <body>
-        <h1>Contact Form</h1>
-    </body>
-</html>
+@extends('layout')
+
+@section('title', 'Contact page')
+
+@section('content')
+
+    <h1>Contact Form</h1>
+
+@endsection

@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>First App</h1>
+@extends('layout')
 
-        <p>
-            <a href="/contact">Contact</a> for more informations.
-        </p>
-    </body>
-</html>
+@section('content')
+
+    <h1>My page</h1>
+
+@endsection
