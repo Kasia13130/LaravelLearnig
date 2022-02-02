@@ -12,29 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'App\Http\Controllers\PageController@home');
 
-Route::get('/', function () {
-    // $lists = [
-    //     'Make product list',
-    //     'Buy products',
-    //     'Make dinner',
-    //     'Washing dishes'
-    // ];
+Route::get('/about', 'App\Http\Controllers\PageController@about');
 
-    return view('welcome')->with([
-        'something' => 'somethingElse',
-        'lists' => [
-        'Make product list',
-        'Buy products',
-        'Make dinner',
-        'Washing dishes']
-    ]);
-});
+Route::get('/contact', 'App\Http\Controllers\PageController@contact');
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
