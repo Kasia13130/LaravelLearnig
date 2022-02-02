@@ -14,19 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $lists = [
+    // $lists = [
+    //     'Make product list',
+    //     'Buy products',
+    //     'Make dinner',
+    //     'Washing dishes'
+    // ];
+
+    return view('welcome')->with([
+        'something' => 'somethingElse',
+        'lists' => [
         'Make product list',
         'Buy products',
         'Make dinner',
-        'Washing dishes'
-    ];
-
-    return view('welcome')->withLists($lists)->withSomething('something');
-
-    // return view('welcome', [
-    //     'lists' => $lists,
-    //     'something' => 'somethingElse'
-    // ]);
+        'Washing dishes']
+    ]);
 });
 
 Route::get('/about', function () {
