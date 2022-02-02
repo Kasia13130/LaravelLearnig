@@ -17,10 +17,12 @@ Route::get('/', function () {
     $lists = [
         'Make product list',
         'Buy products',
-        'Make dinner'
+        'Make dinner',
+        'Washing dishes'
     ];
     return view('welcome', [
-        'lists' => $lists
+        'lists' => $lists,
+        'something' => request('title')
     ]);
 });
 

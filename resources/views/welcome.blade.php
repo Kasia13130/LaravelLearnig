@@ -2,13 +2,15 @@
 
 @section('content')
 
-    <h1>My page</h1>
+    <h1>My {{ $something }} page</h1>
 
     <ul>
-        <?php foreach ($lists as $list) : ?>
 
-            <li><?= $list; ?></li>
+        @foreach($lists as $list)
 
-        <?php endforeach; ?>
+            <li>{{ $list }}</li>
+
+        @endforeach
+
     </ul>
 @endsection
