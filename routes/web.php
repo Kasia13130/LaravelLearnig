@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $lists = [
+        'Make product list',
+        'Buy products',
+        'Make dinner'
+    ];
+    return view('welcome', [
+        'lists' => $lists
+    ]);
 });
 
 Route::get('/about', function () {
