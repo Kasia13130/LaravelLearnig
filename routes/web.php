@@ -20,10 +20,13 @@ Route::get('/', function () {
         'Make dinner',
         'Washing dishes'
     ];
-    return view('welcome', [
-        'lists' => $lists,
-        'something' => request('title')
-    ]);
+
+    return view('welcome')->withLists($lists)->withSomething('something');
+
+    // return view('welcome', [
+    //     'lists' => $lists,
+    //     'something' => 'somethingElse'
+    // ]);
 });
 
 Route::get('/about', function () {
